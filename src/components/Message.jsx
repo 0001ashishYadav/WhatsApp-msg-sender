@@ -6,7 +6,7 @@ function MessagePage() {
   return (
     <>
       <div>Message Page</div>
-      <p>{message}</p>
+      <p>{`${message} wishesh you Happy Navaratry`}</p>
     </>
   );
 }
