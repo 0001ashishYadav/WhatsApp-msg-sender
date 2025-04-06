@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router";
+import CanvasBackground from "./BgEffects";
 
 function HomePage() {
   const [inputValue, setInputValue] = useState("");
@@ -10,12 +11,23 @@ function HomePage() {
     e.preventDefault();
     navigate(`/${inputValue.toLowerCase()}`);
   };
+
   return (
     <div className="mx-auto max-w-2xs h-screen flex flex-col justify-center items-center pb-5 relative">
-      <section className="border rounded h-[400px] w-[400px] border-white ">
+      {/* <CanvasBackground
+        effect="particles"
+        particleCount={150}
+        particleColor="#4f8fff"
+        backgroundColor="#0a0a20"
+        speed={0.8}
+        connectParticles={true}
+        maxConnections={5}
+        connectDistance={200}
+      /> */}
+      <section className="border rounded h-[400px] w-[400px] border-white">
         <img
           src="/assets/durga-maa.png"
-          className=" h-[100%] w-[100%] object-contain"
+          className=" h-[100%] w-[100%] object-contain "
         />
       </section>
 
